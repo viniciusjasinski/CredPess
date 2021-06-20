@@ -78,9 +78,10 @@ def janela_contratacao(tela_contratacao):
                         con.guarda_dados(valor_emp_db, prazo_meses_db, email_db)
                         con.desconectar()
                         tela_finalizar.close()
-                        tela_emp_pessoal.close()
+                        tela_contratacao.close()
                         tela_planos.close()
                         window.close()
+                        break
 
 
 while (True):
