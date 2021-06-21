@@ -11,8 +11,8 @@
     <li>
       <a href="#primeiros-passos">Primeiros Passos</a>
       <ul>
-        <li><a href="#pre-requisitos">Pré Requisitos</a></li>
-        <li><a href="#instalacao">Instalação</a></li>
+        <li><a href="#pré-requisitos">Pré Requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
       </ul>
     </li>
     <li><a href="#como-usar">Como Usar</a></li>
