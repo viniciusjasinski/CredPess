@@ -96,7 +96,6 @@ class Tela:
                 sg.Text('Crédito sem burocracia.', font=("Helvetica", 10), background_color=cls.cor_azul, size=(38,1))],                               
                 linha_em_branco()]
                 
-                #[sg.Image("serasa_logo_branca.png", background_color=cls.cor_azul)]]
 
         layout_planos = [[sg.Column(box0)],
                          [sg.Column(box1, background_color=cls.cor_azul, scrollable = True, vertical_scroll_only=True)]]

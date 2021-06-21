@@ -1,12 +1,5 @@
 <h2 align="center">Processo Seletivo Proway - Serasa</h2>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 <!-- Tabela de Conteúdos -->
 <details open="open">
@@ -68,7 +61,7 @@ Esta é a lista de bibliotecas do Python que são necessárias para o funcioname
 ### Instalação
 
 1. Baixe uma IDE que possa rodar o Python como o [Visual Studio Code](https://code.visualstudio.com/)
-2. Dê Clone no repositório do Github através do comando no terminal
+2. Dê um Clone no repositório do Github através do comando no terminal
    ```sh
    git clone https://github.com/viniciusjasinski/CredPess.git
    ```
