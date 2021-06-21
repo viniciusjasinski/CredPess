@@ -11,14 +11,12 @@
     <li>
       <a href="#primeiros-passos">Primeiros Passos</a>
       <ul>
-        <li><a href="#prerequisitos">Pré Requisitos</a></li>
+        <li><a href="#pre-requisitos">Pré Requisitos</a></li>
         <li><a href="#instalacao">Instalação</a></li>
       </ul>
     </li>
     <li><a href="#como-usar">Como Usar</a></li>
-    <li><a href="#licenca">Licença</a></li>
     <li><a href="#contato">Contato</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
