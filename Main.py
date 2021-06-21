@@ -3,9 +3,18 @@ from Interface import Tela
 from Botoes import Botao_main
 from ConexaoDB import Conexao
 
+"""
+Parte principal do codigo, realiza as solicitacoes de comunicacao com as outras classes
+Para executar o codigo deixe essa pagina selecionada
+
+Parametros
+----------
+con : Objeto utilizado para realizar a coneccao com o banco de dados
+window : Recebe a tela inicial gerada pelo programa 
+------
+"""
 
 con = Conexao() 
-
 
 con.conectar('mysqlserver.ck7rcqskurbo.us-east-2.rds.amazonaws.com', # ip
              3306, # porta
@@ -14,12 +23,18 @@ con.conectar('mysqlserver.ck7rcqskurbo.us-east-2.rds.amazonaws.com', # ip
              'dbdadosemprestimo') # nome do BD
 
 window = Tela.tela()
-tela_planos = None
-tela_emp_pessoal = None
-tela_mudar_bd = None
-tela_confirmacao = None
 
 def is_number(s):
+    
+    """
+    Metodo utilizado se o parametro recebido e' um numero
+    
+    Parametro
+    ----------
+    s : str,
+        Parametro que recebe o email_db para verificar se ele e' apenas numerico 
+    ------
+    """
     try:
         float(s)
         return True
@@ -28,6 +43,22 @@ def is_number(s):
 
 def janela_contratacao(tela_contratacao):
 
+    """
+    Metodo utilizado para gerar a janela de contratacao
+    
+    Parametro
+    ----------
+    tela_contratacao : Janela gerada conforme o botao apertado na tela de planos 
+    ------
+
+    Esse metodo esconde a janela de planos e aguarda que sejam preenchidos os dados de valor_emp,
+    prazo_meses e email
+
+    Caso seja apertado o botao de voltar ele mostra novamente a tela de planos e fecha essa tela
+    Caso seja apertado o botao de contratar ele verifica se os dados foram preenchidos corretamente
+    e caso tenham sido preenchidos adequadamente abre a janela para finalizar a contratacao e guardar
+    no banco de dados
+    """
     tela_planos.Hide()
 
     while (True):
@@ -86,6 +117,12 @@ def janela_contratacao(tela_contratacao):
 
 while (True):
 
+    """
+    Enquanto a janela window estiver aberta o codigo executa essas tarefas
+    A tela aguarda enquanto nao foi acionado nenhum evento, ou seja nenhum botao tenha sido pressionado
+    Assim que pressionado o botao de seguir ele esconde a janela window e abre a janela de planos
+    Aguardando com isso um novo evento e abrindo a janela conforme o plano selecionado
+    """
     event, values = window.read()
     if event == sg.WIN_CLOSED:
         window.close()
