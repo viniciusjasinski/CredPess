@@ -2,20 +2,50 @@ import PySimpleGUI as sg
 
 
 def linha_em_branco():
+
+    """
+    Metodo criado para evitar a repeticao excessiva das linhas em branco na interface e assim facilitar
+    a leitura do codigo e compreensao da montagem das telas
+    """
     return [sg.Text(' ', justification='center', background_color=('#1D4F91'))]
 
 def cria_espacamento_topico():
+
+    """
+    Metodo criado para evitar a repeticao excessiva das dos espacamentos dos topicos na interface 
+    """
     return sg.Text(' ', pad=(8,0), justification='center', size=(30,1), background_color=('#1D4F91'))
 
 def cria_imagem_topico():
+
+    """
+    Metodo criado para evitar a repeticao excessiva da insercao da imagem dos topicos na interface 
+    """    
     return sg.Image("seta_topico.png", background_color='#1D4F91')
 
 
 class Tela:
 
+    """
+    Classe que representa as telas da interface grafica
+    """
     @classmethod
     def tela_planos(cls):
 
+        """
+        Metodo que retorna a janela com os planos para escolher
+
+        Essa tela representa os planos que podem ser selecionados pelo usuario, a tela funciona no formato
+        de caixas ou como foram chamadas as variaveis locais "box", cada box foi colocada em uma mesma coluna
+        realizando a divisao entre o texto Nossos Planos e o detalhamento de cada plano na outra caixa
+
+        Alem disso em cada caixa sao inseridos os elementos que aparecem na interface grafica, sendo textos,
+        botoes, especos para inserir uma entrada de dados e imagens, alem disso para alinhamento e formatacao
+        adequada da tela sao utilizadas as linhas em branco assim como alguns textos vazios para alinhamento
+
+        Para gerar a janela se usa um layout, o qual e' dividido entre colunas, nesse caso duas colunas
+        verticais uma em cima da outra
+        """
         box0 = [[sg.Text('Nossos Planos', pad=(8,0), font=("Helvetica", 18), size=(43,1), justification='center')]]
         
         box1 = [linha_em_branco(),
@@ -77,11 +107,18 @@ class Tela:
 
     @classmethod
     def tela_emp_pessoal(cls):
+
+        """
+        Metodo que retorna a tela de emprestimo pessoal para a contratacao, possuindo um botao de voltar caso
+        o usuario queira escolher outro plano
         
+        Ele tambem realiza a coleta dos dados para a contratacao do emprestimo, como o valor, o prazo para
+        o pagamento e o email do usuario
+        """
         box0 = [[sg.Text('Empréstimo pessoal Online',  font=("Helvetica", 18), size=(40,1), justification='center')]]
         
         box1 = [linha_em_branco(),
-                [sg.Text('A sua oportunidade de conseguir um empréstimo pessoal com uma taxa de apenas 0.75% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,2), justification='center', background_color=(cls.cor_azul))],
+                [sg.Text('A sua oportunidade de conseguir um empréstimo pessoal com uma taxa de apenas 0.85% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,2), justification='center', background_color=(cls.cor_azul))],
                 linha_em_branco(),
                 
                 [sg.Text(' ', pad=(35,0), size=(5,1), background_color=(cls.cor_azul)),
@@ -112,11 +149,15 @@ class Tela:
 
     @classmethod
     def tela_emp_imovel(cls):
-        
+
+        """
+        Metodo que retorna a tela de emprestimo de imovel para a contratacao, funcionando da mesma maneira
+        que o metodo do emprestimo pessoal
+        """
         box0 = [[sg.Text('Empréstimo com garantia de imóvel',  font=("Helvetica", 18), size=(40,1), justification='center')]]
         
         box1 = [linha_em_branco(),
-                [sg.Text('A sua oportunidade de conseguir um empréstimo pessoal com uma taxa de apenas 0.75% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,2), justification='center', background_color=(cls.cor_azul))],
+                [sg.Text('A sua oportunidade de conseguir um empréstimo, fornecendo como garantia um imóvel, com uma taxa de apenas 0.65% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,3), justification='center', background_color=(cls.cor_azul))],
                 linha_em_branco(),
                 
                 [sg.Text(' ', pad=(35,0), size=(5,1), background_color=(cls.cor_azul)),
@@ -147,11 +188,15 @@ class Tela:
 
     @classmethod
     def tela_emp_aut_neg(cls):
-        
+
+        """
+        Metodo que retorna a tela de emprestimo para autonomo negativado para a contratacao, funcionando 
+        da mesma maneira que o metodo do emprestimo pessoal
+        """
         box0 = [[sg.Text('Empréstimo para autônomo negativado',  font=("Helvetica", 18), size=(40,1), justification='center')]]
         
         box1 = [linha_em_branco(),
-                [sg.Text('A sua oportunidade de conseguir um empréstimo pessoal com uma taxa de apenas 0.75% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,2), justification='center', background_color=(cls.cor_azul))],
+                [sg.Text('A sua oportunidade de conseguir um empréstimo para quitar as suas dívidas, com uma taxa de apenas 0.90% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,3), justification='center', background_color=(cls.cor_azul))],
                 linha_em_branco(),
                 
                 [sg.Text(' ', pad=(35,0), size=(5,1), background_color=(cls.cor_azul)),
@@ -182,11 +227,15 @@ class Tela:
 
     @classmethod
     def tela_emp_neg(cls):
-        
+
+        """
+        Metodo que retorna a tela de emprestimo para negativado para a contratacao, funcionando da mesma 
+        maneira que o metodo do emprestimo pessoal
+        """        
         box0 = [[sg.Text('Empréstimo para negativado',  font=("Helvetica", 18), size=(40,1), justification='center')]]
         
         box1 = [linha_em_branco(),
-                [sg.Text('A sua oportunidade de conseguir um empréstimo pessoal com uma taxa de apenas 0.75% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,2), justification='center', background_color=(cls.cor_azul))],
+                [sg.Text('A sua oportunidade de conseguir um empréstimo pessoal para quitar as suas dívidas, com uma taxa de apenas 1.00% a.m. conforme o valor desejado.', pad=(50,0), font=("Helvetica", 11), size=(50,3), justification='center', background_color=(cls.cor_azul))],
                 linha_em_branco(),
                 
                 [sg.Text(' ', pad=(35,0), size=(5,1), background_color=(cls.cor_azul)),
@@ -218,15 +267,29 @@ class Tela:
     @classmethod
     def tela_preencha_dados(cls, valor_do_emp, prazo_do_emp, email_do_emp):
 
+        """
+        Metodo que retorna a tela solicitando que os dados sejam preenchidos de maneira adequada 
+        Essa tela sera aberta caso o valor_do_emp ou o prazo_do_emp nao sejam inteiros, tambem retorna
+        a tela caso o email_do_emp seja um float ou esteja em branco
+
+        Parametros
+        ----------
+        valor_emp : int,
+            Representa o valor do emprestimo solicitado
+        prazo_emp: int, 
+            Prazo para realizar o pagamento do emprestimo 
+        email: str,
+            Corresponde ao email do usuario para terminar as coletas de informacoes
+        ------
+        """    
         try:
            int(valor_do_emp)
         except:
-            if valor_do_emp == '' or (type(valor_do_emp) != int and type(valor_do_emp) != float):
-                box1 = [[sg.Text(' ', justification='center', size=(24,1), background_color=(cls.cor_azul))],
-                        [sg.Text('Por favor insira um valor de empréstimo válido, contendo apenas um número inteiro. Exemplo de preenchimento correto no campo R$: 1200',size=(35,5), font=("Helvetica", 11), justification='center',background_color=(cls.cor_azul))],
-                        [sg.Text(' ', justification='center', size=(24,1), background_color=(cls.cor_azul))],                
-                        [sg.Text(' ', size=(15,1), background_color=(cls.cor_azul)), 
-                        sg.Button('Ok', key='ok', size=(5,1))]]
+            box1 = [[sg.Text(' ', justification='center', size=(24,1), background_color=(cls.cor_azul))],
+                    [sg.Text('Por favor insira um valor de empréstimo válido, contendo apenas um número inteiro. Exemplo de preenchimento correto no campo R$: 1200',size=(35,5), font=("Helvetica", 11), justification='center',background_color=(cls.cor_azul))],
+                    [sg.Text(' ', justification='center', size=(24,1), background_color=(cls.cor_azul))],                
+                    [sg.Text(' ', size=(15,1), background_color=(cls.cor_azul)), 
+                    sg.Button('Ok', key='ok', size=(5,1))]]
         else:
             try:
                 int(prazo_do_emp)
@@ -264,6 +327,9 @@ class Tela:
     @classmethod
     def tela_contratar(cls):
 
+        """
+        Metodo que retorna a tela de finalizacao da contratacao
+        """ 
         box1 = [[sg.Text('Contratação Realizada!',size=(39,1), font=("Helvetica", 16), justification='center',background_color=(cls.cor_azul))],
                 linha_em_branco(),                
                 [sg.Text(' ', pad=(50,0), size=(10,1), background_color=(cls.cor_azul)), 
@@ -278,6 +344,10 @@ class Tela:
     @classmethod
     def tela(cls):
 
+        """
+        Metodo que retorna a tela inicial do programa
+        Nela tambem sao definidas as cores padroes que sao utilizadas nas telas de maneira mais ludica
+        """ 
         cls.cor_preto = '#161616'
         cls.cor_azul = '#1D4F91'
         cls.cor_branco = 'white'

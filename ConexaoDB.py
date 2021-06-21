@@ -2,14 +2,36 @@ import pymysql.cursors
 
 
 class Conexao:
+    
+    """
+    Classe que representa uma conexão com o banco de dados (DB)
+    """
 
     def __init__(self):
         self.__conectado = False
         self.__msg = ""
     
-    
+
     def conectar(self, ip, porta, usuario, senha, banco_de_dados):
-        
+
+        """
+        Realiza a tentativa de conectar ao banco de dados no servidor dos parâmetros recebidos
+        Caso a conexao não seja bem sucedida, retorna uma exceção e mostra no terminal
+
+        Parametros
+        ----------
+        ip : str,
+            O endereço IP do servidor onde está o DB
+        porta: int, 
+            Porta usada pelo DB depara receber as conexões 
+        usuario: str,
+            O nome do usuario do DB
+        senha: str,
+            A senha do DB
+        banco_de_dados: str,
+            O nome do DB utilizado
+        ------
+        """
         conexao = None
         porta = int(porta)
 
@@ -36,6 +58,10 @@ class Conexao:
     
     def desconectar(self):
 
+        """
+        Realiza a tentativa de desconectar o DB.
+        Caso a desconexao ja tenha sido realizada mostra que ela ja foi realizada mostrando no terminal
+        """
         if self.__conectado:
             try:
                 self.__conexao.close()
@@ -53,17 +79,45 @@ class Conexao:
         
         
     def get_conexao(self):
+
+        """
+        Permite mostrar se a conexao com o DB esta ativa ou nao
+        """
         return self.__conexao
     
     def get_msg(self):
+
+        """
+        Permite mostrar a mensagem desejada no terminal
+        """
         return self.__msg
 
     def set_msg(self, msg):
+
+        """
+        Permite poder modificar a mensagem mostrada no terminal
+        """
         self.__msg = msg
     
 
     def guarda_dados(self, valor_emp, prazo_emp, email):
 
+        """
+        Realiza a tentativa de guardar os dados no DB com os parâmetros recebidos
+        Caso a conexao esteja ativa realizar o comando de insercao de dados no DB conectado
+
+        Ao final realiza um commit para atualizar os valores novos no DB
+
+        Parametros
+        ----------
+        valor_emp : int,
+            Representa o valor do emprestimo solicitado
+        prazo_emp: int, 
+            Prazo para realizar o pagamento do emprestimo 
+        email: str,
+            Corresponde ao email do usuario para terminar as coletas de informacoes
+        ------
+        """
         if self.__conectado:
             with self.__conexao.cursor() as cursor:
 

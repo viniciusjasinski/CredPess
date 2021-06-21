@@ -1,5 +1,4 @@
-# CredPess
-
+<h2 align="center">Processo Seletivo Proway - Serasa</h2>
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -9,26 +8,12 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
-<!-- PROJECT LOGO 
-<br />
-<p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
-
-  <h2 align="center">Processo Seletivo Proway - Serasa</h2>
-
-
-<!-- TABLE OF CONTENTS -->
+<!-- Tabela de Conteúdos -->
 <details open="open">
   <summary>Tabela de Conteúdos</summary>
   <ol>
     <li>
       <a href="#sobre-o-projeto">Sobre o Projeto</a>
-      <ul>
-        <li><a href="#como-foi-construido">Como foi Construido</a></li>
-      </ul>
     </li>
     <li>
       <a href="#primeiros-passos">Primeiros Passos</a>
@@ -49,107 +34,63 @@
 <!-- Sobre o Projeto -->
 ## Sobre o Projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Esse projeto foi desenvolvido como desafio para o processo seletivo do Serasa Experian, realizado pela ProWay. O projeto consiste em fornecer acesso a alternativas e propostas para contratar um empréstimo pessoal. Dentre os requisitos estavam:
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+* Listar as ofertas de crédito de acordo com o descritivo técnico.
+*  Detalhar a oferta do usuário ao momento de escolha.
+*  Apresentar a revisão das informações e permitir que o usuário realize a contratação do empréstimo.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+Além disso, para o projeto foi de livre escolha a linguagem de programação utilizada e para este código foi utilizado o Python na sua versão 3.8.6. Disponível em:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+* [Python](https://www.python.org/)
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Como foi Construido
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
 
 
 
 <!-- Primeiros Passos -->
 ## Primeiros Passos
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Para rodar o código fornecido em seu pleno funcionamento é necessário utilizar de uma conexão com a internet, pois ele realiza a comunicação com um banco de dados para armazenamento das informações, além disso é necessário que todos os arquivos se encontrem na mesma pasta.
 
 ### Pré Requisitos
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+Esta é a lista de bibliotecas do Python que são necessárias para o funcionamento do código.
+
+* [PySimpleGUI](https://pypi.org/project/PySimpleGUI/)
   ```sh
-  npm install npm@latest -g
+  pip install PySimpleGUI
+  ```
+* [PyMySQL](https://pypi.org/project/PyMySQL/)
+  ```sh
+  pip install PyMySQL
   ```
 
 ### Instalação
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Baixe uma IDE que possa rodar o Python como o [Visual Studio Code](https://code.visualstudio.com/)
+2. Dê Clone no repositório do Github através do comando no terminal
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/viniciusjasinski/CredPess.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+3. Instale as duas bibliotecas necessárias demonstradas nos <a href="#prerequisitos">Pré Requisitos</a>
 
+Esses primeiros passos servem para a compilação e funcionamento adequado do código, contudo caso deseje acessar também o banco de dados e visualizar os registros do dados coletados é necessário seguir os próximos passos demonstrados.
+
+4. Baixe um programa que possua leitura e conexão com o banco de dados online como o [MySQL Workbench](https://www.mysql.com/products/workbench/)
+
+5. Adicione uma nova conexão conforme os dados de login fornecidos no código Main.
 
 <!-- Como Usar -->
 ## Como Usar
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+O código funciona de maneira bem intuitiva, inicialmente é apresentada uma tela de apresentação na qual para prosseguir basta pressionar o botão "Seguir". Assim que apertado, o botão abrirá uma nova janela, denominada Planos, com as 4 diferentes opções de créditos e suas respectivas vantagens. As opções que possuem um botão para ser apertado são "Empréstimo pessoal Online", "Empréstimo com garantia de imóvel", "Empréstimo para autônomo negativado" e "Empréstimo para negativado", assim que decidida a opção mais adequada para o seu perfil basta pressionar o respectivo botão com o plano desejado.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+Assim que selecionado o plano, são apresentados um maior detalhamento sobre como funcionará o empréstimo assim como seu detalhamento. Caso esse não seja o plano desejado é possível apertar o botão "Voltar" para retornar à tela de Planos. Assim que decidido o plano adequado é necessário preencher os campos do valor em reais do empréstimo desejado, a quantidade de meses que levarão até finalizar o pagamento do empréstimo e o seu e-mail para poder coletar as informações restantes necessárias, destaca-se que devido a esse código funcionar apenas para o desafio nenhuma dessas informações terá um uso futuro. Além disso, enquanto não preenchidas adequadamente as informações, não será possível realizar a contratação do serviço. Após preenchidos os valores de empréstimo e seu prazo com números inteiros, além do e-mail não ter sido preenchido com apenas números será possível abrir a tela de contratação e clicar no botão de finalizar, caso tenha sido preenchida alguma informação de maneira indevida, basta fechar a janela de finalizar contratação.
+ 
 
 <!-- Contato -->
 ## Contato
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Vinícius César Jasinski - vinicius.jasinski@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+Link do Projeto: [https://github.com/viniciusjasinski/CredPess](https://github.com/viniciusjasinski/CredPess)
