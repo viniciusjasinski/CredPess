@@ -1,4 +1,4 @@
-<h2 align="center">Processo Seletivo Proway - Serasa</h2>
+<h1 align="center">Processo Seletivo Proway - Serasa</h1>
 
 
 <!-- Tabela de Conteúdos -->
@@ -25,7 +25,7 @@
 <!-- Sobre o Projeto -->
 ## Sobre o Projeto
 
-Esse projeto foi desenvolvido como desafio para o processo seletivo do Serasa Experian, realizado pela ProWay. O projeto consiste em fornecer acesso a alternativas e propostas para contratar um empréstimo pessoal. Dentre os requisitos estavam:
+Este projeto foi desenvolvido como desafio para o processo seletivo do Serasa Experian, realizado pela ProWay. O projeto consiste em fornecer acesso a alternativas e propostas para contratar um empréstimo pessoal. Dentre os requisitos estavam:
 
 * Listar as ofertas de crédito de acordo com o descritivo técnico.
 *  Detalhar a oferta do usuário ao momento de escolha.
@@ -34,8 +34,6 @@ Esse projeto foi desenvolvido como desafio para o processo seletivo do Serasa Ex
 Além disso, para o projeto foi de livre escolha a linguagem de programação utilizada e para este código foi utilizado o Python na sua versão 3.8.6. Disponível em:
 
 * [Python](https://www.python.org/)
-
-
 
 
 <!-- Primeiros Passos -->
@@ -74,10 +72,32 @@ Esses primeiros passos servem para a compilação e funcionamento adequado do c�
 <!-- Como Usar -->
 ## Como Usar
 
-O código funciona de maneira bem intuitiva, inicialmente é apresentada uma tela de apresentação na qual para prosseguir basta pressionar o botão "Seguir". Assim que apertado, o botão abrirá uma nova janela, denominada Planos, com as 4 diferentes opções de créditos e suas respectivas vantagens. As opções que possuem um botão para ser apertado são "Empréstimo pessoal Online", "Empréstimo com garantia de imóvel", "Empréstimo para autônomo negativado" e "Empréstimo para negativado", assim que decidida a opção mais adequada para o seu perfil basta pressionar o respectivo botão com o plano desejado.
+O código funciona de maneira bem intuitiva, inicialmente é apresentada uma tela de apresentação na qual para prosseguir basta pressionar o botão "Seguir". 
 
-Assim que selecionado o plano, são apresentados um maior detalhamento sobre como funcionará o empréstimo assim como seu detalhamento. Caso esse não seja o plano desejado é possível apertar o botão "Voltar" para retornar à tela de Planos. Assim que decidido o plano adequado é necessário preencher os campos do valor em reais do empréstimo desejado, a quantidade de meses que levarão até finalizar o pagamento do empréstimo e o seu e-mail para poder coletar as informações restantes necessárias, destaca-se que devido a esse código funcionar apenas para o desafio nenhuma dessas informações terá um uso futuro. Além disso, enquanto não preenchidas adequadamente as informações, não será possível realizar a contratação do serviço. Após preenchidos os valores de empréstimo e seu prazo com números inteiros, além do e-mail não ter sido preenchido com apenas números será possível abrir a tela de contratação e clicar no botão de finalizar, caso tenha sido preenchida alguma informação de maneira indevida, basta fechar a janela de finalizar contratação.
- 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73205357/122987290-d0589500-d376-11eb-8669-865314b6d89e.png" />
+</p>
+
+Assim que apertado, o botão abrirá uma nova janela, denominada Planos, com as 4 diferentes opções de créditos e suas respectivas vantagens. As opções que possuem um botão para ser apertado são "Empréstimo pessoal Online", "Empréstimo com garantia de imóvel", "Empréstimo para autônomo negativado" e "Empréstimo para negativado", assim que decidida a opção mais adequada para o seu perfil basta pressionar o respectivo botão com o plano desejado.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73205357/122987324-db132a00-d376-11eb-819f-d9bd889a4097.png" />
+<img src="https://user-images.githubusercontent.com/73205357/122987365-e6feec00-d376-11eb-9733-8c97288f7043.png" />
+</p>
+
+Após ter sido selecionado o plano, é apresentado um maior detalhamento sobre como funcionará o empréstimo, assim como seu descritivo técnico. Caso esse não seja o plano desejado é possível apertar o botão "Voltar" para retornar à tela de Planos. Assim que decidido o plano adequado é necessário preencher o campo do valor em reais do empréstimo desejado, a quantidade de meses que levará até finalizar o pagamento do empréstimo e o seu e-mail para poder coletar as informações restantes necessárias, destaca-se que devido a esse código funcionar apenas para o desafio da ProWay nenhuma dessas informações terá um uso futuro. Além disso, enquanto não preenchidas adequadamente as informações, não será possível realizar a contratação do serviço. 
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73205357/122988084-bb303600-d377-11eb-8966-54b41cefc69f.png" />
+</p>
+
+Após preenchidos os valores de empréstimo e seu prazo com números inteiros, além do e-mail não ter sido preenchido com apenas números será possível abrir a tela de contratação e clicar no botão de finalizar. Caso tenha sido preenchida alguma informação de maneira equivocada, basta fechar a janela de finalizar contratação e corrigir essas informações.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73205357/122987447-fc741600-d376-11eb-88f4-4b403cc4bf13.png" />
+</p>
+
+Assim que finalizado, o programa é encerrado e os dados preenchidos são armazenados em um banco de dados online, guardando assim as informações do empréstimo solicitado, assim como o e-mail para entrar em contato.
 
 <!-- Contato -->
 ## Contato
